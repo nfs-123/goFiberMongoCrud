@@ -13,6 +13,8 @@ func main() {
         return c.SendString("Hello, World 👋!")
     })
 	app.Get("/getColleges",handlers.GetColleges)
+    app.Post("/addCollege",handlers.AddCollege)
+    app.Delete("/deleteCollege/:name",handlers.DeleteCollege)
 
     app.Listen(":3000")
 }
